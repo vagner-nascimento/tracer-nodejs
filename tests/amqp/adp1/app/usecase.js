@@ -5,8 +5,9 @@ module.exports = class UseCase {
 
     async execute() {
         const callName = 'UseCase.execute';
-        console.log(`${callName} - trace id ${this.tracer.getId()}`);
 
+        console.log(`${callName} - trace id ${this.tracer.getId()}`);
+        
         const sleepTime = this._getSleepTime();
         
         console.log(`${callName} - sleeping ${sleepTime} ms`);
