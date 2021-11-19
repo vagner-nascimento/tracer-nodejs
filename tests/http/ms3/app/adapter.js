@@ -4,11 +4,7 @@ module.exports = class Adapter {
         this.useCase= usecase;
     }
 
-    async process() {
-/*        const callName = 'Adapter.process';
-
-        console.log(`${callName} - trace id ${this.tracer.getId()} `); */
-        
+    async process() {        
         await this.useCase.execute();
     }
 }

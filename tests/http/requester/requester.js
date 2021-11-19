@@ -14,6 +14,7 @@ Promise
     .then(res => res.forEach(r => console.log(`status: ${r.status} and data`, r.data)))
 */
 
+
 /* // Test single call that calls other MSs
 const client = axios.create({ baseURL: "http://localhost:3000" }); // 3000 = ms1
 
