@@ -1,10 +1,9 @@
 module.exports = class UseCase {
-    constructor({ tracer, repository }) {
+    constructor({ tracer }) {
         this.tracer = tracer;
-        this.repository = repository;
     }
 
-    async execute(data) {
+    async execute() {
         const callName = 'UseCase.execute';
         console.log(`${callName} - trace id ${this.tracer.getId()}`);
         
@@ -13,8 +12,6 @@ module.exports = class UseCase {
 
         await this._sleep(sleepTime);
         console.log(`${callName} - trace id after sleep ${sleepTime} ms ${this.tracer.getId()}`);
-
-        await this.repository.save(data);
     }
 
     _sleep(sleepTime) {
