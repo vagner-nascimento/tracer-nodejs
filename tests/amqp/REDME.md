@@ -4,7 +4,7 @@ The tracer has been implemented into adapters 1 and 2 (**adp1** and **adp2**).
 The adp1 reads the messages from "**data1**" queue, create or transporte the trace id into message's data to the queue "**data2**", that is readed from adp2, that just prints the trace id.
 
 #### Infra
-- **RabbitMq**: This server is dockerized into file "**docker-compose.rabbit.yml**".
+- **RabbitMq**: This server is dockerized into file "**tests/docker-compose.rabbit.yml**".
 Run command: "docker-compose -f docker-compose.rabbit.yml up --build -d"
 
 #### Adapters
